@@ -10,7 +10,7 @@
     "target": "es5",
     "module": "esnext",
     "moduleResolution": "node",
-    "lib": ["dom", "dom.iterable", "es6", "esnext"],
+    "lib": ["dom", "scripthost", "esnext"],
     "jsx": "react",
     "strict": true,
     "noEmit": true,
