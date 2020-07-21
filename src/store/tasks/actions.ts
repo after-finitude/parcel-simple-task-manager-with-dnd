@@ -15,10 +15,14 @@ export const updateState = (tasks: TasksState): ActionUpdateState => ({
   payload: tasks,
 });
 
-export const addTask = (title: string, description: string): ActionAddTask => ({
+export const addTask = (
+  title: string,
+  description: string,
+  id: string = v4()
+): ActionAddTask => ({
   type: TasksActionTypes.ADD_TASK,
   payload: {
-    id: v4(),
+    id,
     title,
     description,
     closed: false,
