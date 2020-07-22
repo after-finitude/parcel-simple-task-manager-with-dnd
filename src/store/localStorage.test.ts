@@ -27,10 +27,10 @@ class LocalStorageMock {
 describe("Local storage", () => {
   beforeAll(() => {
     localStorage = new LocalStorageMock() as any;
-
-    localStorage.setItem("state", "1");
   });
   test("loadState", () => {
+    localStorage.setItem("state", "1");
+
     const input = loadState();
     const output = 1;
 
