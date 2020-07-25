@@ -1,5 +1,4 @@
 import { Reducer } from "redux";
-import { v4 } from "uuid";
 
 import {
   TasksState,
@@ -9,8 +8,8 @@ import {
 } from "store/tasks/types";
 
 const initialState: TasksState = [
-  { id: v4(), title: "Test1", description: "test1", closed: false },
-  { id: v4(), title: "Test2", description: "test2", closed: false },
+  { id: "test1", title: "Test1", description: "test1", closed: false },
+  { id: "test2", title: "Test2", description: "test2", closed: false },
 ];
 
 export const tasksReducer: Reducer<TasksState, TasksActions> = (
