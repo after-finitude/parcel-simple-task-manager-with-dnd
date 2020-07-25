@@ -35,6 +35,17 @@ describe("Local storage", () => {
     const output = 1;
 
     expect(input).toBe(output);
+
+    localStorage.clear();
+  });
+
+  test("loadState if getItem return null ", () => {
+    const input = loadState();
+    const output = {};
+
+    expect(input).toEqual(output);
+
+    localStorage.clear();
   });
 
   test("saveState", () => {
@@ -54,5 +65,7 @@ describe("Local storage", () => {
     });
 
     expect(input).toBe(output);
+
+    localStorage.clear();
   });
 });
