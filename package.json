@@ -64,7 +64,7 @@
     "@types/styled-components": "5.1.2",
     "@types/uuid": "8.0.1",
     "babel-plugin-module-resolver": "4.0.0",
-    "jest": "26.2.2",
+    "jest": "26.3.0",
     "parcel": "latest",
     "parcel-plugin-bundle-visualiser": "1.2.0",
     "rimraf": "3.0.2",
