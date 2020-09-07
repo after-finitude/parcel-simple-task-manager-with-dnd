@@ -9,29 +9,21 @@ jobs:
     strategy:
       matrix:
         os: [windows-latest, ubuntu-latest]
-        node: ["14", "12"]
 
     steps:
       - uses: actions/checkout@v2
 
-      - uses: actions/cache@v2
+      - name: Сaching
+        uses: actions/cache@v2
         with:
           path: "**/node_modules"
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-
       - name: Install deps
-        run: |
-          yarn
+        run: yarn
+
       - name: Build
-        run: |
-          yarn build
+        run: yarn build
+
       - name: Tests
-        run: |
-          yarn test
-        env:
-          CI: true
+        run: yarn test
