@@ -1,14 +1,10 @@
-name: CI
+name: Build simple-task-manager-with-dnd-parcel
 
 on: push
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        os: [windows-latest, ubuntu-latest]
 
     steps:
       - name: Checkout
