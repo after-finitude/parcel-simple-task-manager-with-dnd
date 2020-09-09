@@ -10,32 +10,6 @@
     "test:cov": "jest --coverage",
     "clean": "rimraf build node_modules"
   },
-  "babel": {
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react",
-      "@babel/preset-typescript"
-    ],
-    "plugins": [
-      [
-        "module-resolver",
-        {
-          "root": [
-            "./"
-          ],
-          "alias": {
-            "components": "./src/components",
-            "store": "./src/store"
-          }
-        }
-      ]
-    ]
-  },
-  "jest": {
-    "testMatch": [
-      "<rootDir>/src/**/*.(test).{ts,tsx}"
-    ]
-  },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
