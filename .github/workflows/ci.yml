@@ -24,3 +24,6 @@ jobs:
 
       - name: Tests
         run: yarn test
+
+      - name: Pretty
+        run: yarn pretty
