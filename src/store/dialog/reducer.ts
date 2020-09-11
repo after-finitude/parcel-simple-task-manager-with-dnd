@@ -14,7 +14,7 @@ const initialState: DialogState = {
 
 export const dialogReducer: Reducer<DialogState, DialogActions> = (
   state: DialogState = initialState,
-  action: DialogActions
+  action: DialogActions,
 ): DialogState => {
   switch (action.type) {
     case DialogActionTypes.OPEN_DIALOG:

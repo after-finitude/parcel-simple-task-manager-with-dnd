@@ -15,7 +15,7 @@ describe("Tasks reducer", () => {
       updateState([
         { id: "123", title: "zxczx", description: "fdg", closed: false },
         { id: "234234", title: "asdas", description: "sdfgsdfg", closed: true },
-      ])
+      ]),
     );
     const output: TasksState = [
       { id: "123", title: "zxczx", description: "fdg", closed: false },
@@ -28,7 +28,7 @@ describe("Tasks reducer", () => {
   test("action addTask", () => {
     const input: TasksState = tasksReducer(
       undefined,
-      addTask("asdasd", "asfasfa", "123423")
+      addTask("asdasd", "asfasfa", "123423"),
     );
     const output = [
       { closed: false, description: "test1", id: "test1", title: "Test1" },
@@ -42,7 +42,7 @@ describe("Tasks reducer", () => {
   test("action updateTask if equal id's", () => {
     const input: TasksState = tasksReducer(
       undefined,
-      updateTask("test1", "cxcs", "sdfs")
+      updateTask("test1", "cxcs", "sdfs"),
     );
     const output = [
       { closed: false, description: "sdfs", id: "test1", title: "cxcs" },
@@ -55,7 +55,7 @@ describe("Tasks reducer", () => {
   test("action updateTask if don't equal id's", () => {
     const input: TasksState = tasksReducer(
       undefined,
-      updateTask("adasd", "cxcs", "sdfs")
+      updateTask("adasd", "cxcs", "sdfs"),
     );
     const output = [
       { closed: false, description: "test1", id: "test1", title: "Test1" },

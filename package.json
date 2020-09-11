@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "parcel src/index.html --open --no-source-maps --out-dir build",
     "build": "rimraf build && tsc --noEmit && parcel build src/index.html --no-source-maps --experimental-scope-hoisting --public-url ./ --out-dir build",
+    "pretty": "prettier --config .prettierrc.json --write src/**/*.{html,ts,tsx}",
     "test": "jest",
     "test:cov": "jest --coverage",
     "clean": "rimraf build node_modules"
@@ -41,6 +42,7 @@
     "jest": "26.4.2",
     "parcel": "latest",
     "parcel-plugin-bundle-visualiser": "1.2.0",
+    "prettier": "2.1.1",
     "rimraf": "3.0.2",
     "styled-components": "5.2.0"
   }

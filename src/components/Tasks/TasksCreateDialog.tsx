@@ -29,11 +29,11 @@ export const TasksCreateDialog: React.FC<Props> = memo(({ status }) => {
     handleSubmit(({ title, description }) => {
       dispatch(thunkAddTask(title, description));
     }),
-    [dispatch, thunkAddTask]
+    [dispatch, thunkAddTask],
   );
   const handleClose = useCallback(
     () => dispatch(closeDialog(DialogTypes.CREATE)),
-    [dispatch]
+    [dispatch],
   );
 
   return (

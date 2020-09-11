@@ -12,7 +12,7 @@ export const TasksAddButton: React.FC = () => {
 
   const handleAddButton = useCallback(
     () => dispatch(openDialog(DialogTypes.CREATE)),
-    [dispatch]
+    [dispatch],
   );
 
   return <AddButton onClick={handleAddButton}>Add task</AddButton>;
@@ -21,5 +21,5 @@ export const TasksAddButton: React.FC = () => {
 const AddButton = styled(props => (
   <Button startIcon={<AddIcon />} {...props} />
 ))({
-  width: "100%"
+  width: "100%",
 });

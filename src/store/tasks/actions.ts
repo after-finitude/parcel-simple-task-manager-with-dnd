@@ -18,7 +18,7 @@ export const updateState = (tasks: TasksState): ActionUpdateState => ({
 export const addTask = (
   title: string,
   description: string,
-  id: string = v4()
+  id: string = v4(),
 ): ActionAddTask => ({
   type: TasksActionTypes.ADD_TASK,
   payload: {
@@ -32,7 +32,7 @@ export const addTask = (
 export const updateTask = (
   id: string,
   title: string,
-  description: string
+  description: string,
 ): ActionUpdateTask => ({
   type: TasksActionTypes.UPDATE_TASK,
   payload: {

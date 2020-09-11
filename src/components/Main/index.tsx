@@ -12,8 +12,8 @@ import { TasksUpdateDialog } from "components/Tasks/TasksUpdateDialog";
 
 export const Main: React.FC = memo(() => {
   const dialog = useSelector<RootState, DialogState>(
-    (state) => state.dialog,
-    shallowEqual
+    state => state.dialog,
+    shallowEqual,
   );
 
   return (

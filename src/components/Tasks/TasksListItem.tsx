@@ -26,15 +26,15 @@ export const TasksListItem: React.FC<ComponentProps> = memo(
 
     const handleEdit = useCallback(
       () => dispatch(openDialog(DialogTypes.UPDATE, id)),
-      [dispatch, id]
+      [dispatch, id],
     );
     const handleClose = useCallback(() => dispatch(closeTask(id)), [
       dispatch,
-      id
+      id,
     ]);
     const handleRestore = useCallback(() => dispatch(restoreTask(id)), [
       dispatch,
-      id
+      id,
     ]);
 
     return (
@@ -67,7 +67,7 @@ export const TasksListItem: React.FC<ComponentProps> = memo(
         </ListItem>
       </ListItemWrapper>
     );
-  }
+  },
 );
 
 const ListItemWrapper = styled.div<{ closed: boolean }>`

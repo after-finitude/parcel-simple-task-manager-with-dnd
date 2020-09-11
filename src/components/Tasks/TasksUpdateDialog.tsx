@@ -31,18 +31,18 @@ export const TasksUpdateDialog: React.FC<Props> = memo(
     const dispatch = useDispatch();
     const { register, handleSubmit } = useForm<FormData>();
     const currentTask = useSelector<RootState, Task | undefined>(
-      selectTaskById(currentTaskId)
+      selectTaskById(currentTaskId),
     );
 
     const onSubmit = useCallback(
       handleSubmit(({ title, description }) => {
         dispatch(thunkUpdateTask(title, description));
       }),
-      [dispatch, thunkUpdateTask]
+      [dispatch, thunkUpdateTask],
     );
     const handleClose = useCallback(
       () => dispatch(closeDialog(DialogTypes.UPDATE)),
-      [dispatch]
+      [dispatch],
     );
 
     return (
@@ -85,5 +85,5 @@ export const TasksUpdateDialog: React.FC<Props> = memo(
         </form>
       </Dialog>
     );
-  }
+  },
 );

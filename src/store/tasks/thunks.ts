@@ -8,24 +8,24 @@ import { addTask, updateTask } from "store/tasks/actions";
 
 export const thunkAddTask = (
   title: string,
-  description: string
-): ThunkAction<Promise<any>, RootState, null, Action> => async (dispatch) =>
+  description: string,
+): ThunkAction<Promise<any>, RootState, null, Action> => async dispatch =>
   Promise.resolve(dispatch(addTask(title, description))).then(() =>
-    dispatch(closeDialog(DialogTypes.CREATE))
+    dispatch(closeDialog(DialogTypes.CREATE)),
   );
 
 export const thunkUpdateTask = (
   title: string,
-  description: string
+  description: string,
 ): ThunkAction<Promise<any>, RootState, null, Action> => async (
   dispatch,
-  getState
+  getState,
 ) => {
   const {
     dialog: { currentTaskId },
   } = getState();
 
   return Promise.resolve(
-    dispatch(updateTask(currentTaskId, title, description))
+    dispatch(updateTask(currentTaskId, title, description)),
   ).then(() => dispatch(closeDialog(DialogTypes.UPDATE)));
 };

@@ -12,8 +12,8 @@ import { TasksListItem } from "components/Tasks/TasksListItem";
 export const TasksList: React.FC = memo(() => {
   const dispatch = useDispatch();
   const storeTasks = useSelector<RootState, TasksState>(
-    (state) => state.tasks,
-    shallowEqual
+    state => state.tasks,
+    shallowEqual,
   );
   const [tasks, setTasks] = useState<TasksState>(storeTasks);
 

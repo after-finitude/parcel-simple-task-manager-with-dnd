@@ -7,7 +7,7 @@ import {
 
 export const openDialog = (
   type: DialogTypes,
-  id: string = ""
+  id: string = "",
 ): ActionOpenDialog => ({
   type: DialogActionTypes.OPEN_DIALOG,
   payload: {

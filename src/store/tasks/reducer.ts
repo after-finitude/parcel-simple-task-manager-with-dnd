@@ -14,7 +14,7 @@ const initialState: TasksState = [
 
 export const tasksReducer: Reducer<TasksState, TasksActions> = (
   state: TasksState = initialState,
-  action: TasksActions
+  action: TasksActions,
 ): TasksState => {
   switch (action.type) {
     case TasksActionTypes.UPDATE_STATE:
@@ -29,7 +29,7 @@ export const tasksReducer: Reducer<TasksState, TasksActions> = (
               title: action.payload.title,
               description: action.payload.description,
             }
-          : task
+          : task,
       );
     case TasksActionTypes.CLOSE_TASK:
       return state.map((task: Task) =>
@@ -38,7 +38,7 @@ export const tasksReducer: Reducer<TasksState, TasksActions> = (
               ...task,
               closed: true,
             }
-          : task
+          : task,
       );
     case TasksActionTypes.RESTORE_TASK:
       return state.map((task: Task) =>
@@ -47,7 +47,7 @@ export const tasksReducer: Reducer<TasksState, TasksActions> = (
               ...task,
               closed: false,
             }
-          : task
+          : task,
       );
     default:
       return state;
