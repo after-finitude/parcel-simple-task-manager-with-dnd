@@ -10,7 +10,7 @@ import { TasksState } from "store/tasks/types";
 
 describe("Tasks reducer", () => {
   test("action updateState", () => {
-    const input: TasksState = tasksReducer(
+    const input = tasksReducer(
       undefined,
       updateState([
         { id: "123", title: "zxczx", description: "fdg", closed: false },
@@ -26,11 +26,11 @@ describe("Tasks reducer", () => {
   });
 
   test("action addTask", () => {
-    const input: TasksState = tasksReducer(
+    const input = tasksReducer(
       undefined,
       addTask("asdasd", "asfasfa", "123423"),
     );
-    const output = [
+    const output: TasksState = [
       { closed: false, description: "test1", id: "test1", title: "Test1" },
       { closed: false, description: "test2", id: "test2", title: "Test2" },
       { closed: false, description: "asfasfa", id: "123423", title: "asdasd" },
@@ -40,11 +40,8 @@ describe("Tasks reducer", () => {
   });
 
   test("action updateTask if equal id's", () => {
-    const input: TasksState = tasksReducer(
-      undefined,
-      updateTask("test1", "cxcs", "sdfs"),
-    );
-    const output = [
+    const input = tasksReducer(undefined, updateTask("test1", "cxcs", "sdfs"));
+    const output: TasksState = [
       { closed: false, description: "sdfs", id: "test1", title: "cxcs" },
       { closed: false, description: "test2", id: "test2", title: "Test2" },
     ];
@@ -53,11 +50,8 @@ describe("Tasks reducer", () => {
   });
 
   test("action updateTask if don't equal id's", () => {
-    const input: TasksState = tasksReducer(
-      undefined,
-      updateTask("adasd", "cxcs", "sdfs"),
-    );
-    const output = [
+    const input = tasksReducer(undefined, updateTask("adasd", "cxcs", "sdfs"));
+    const output: TasksState = [
       { closed: false, description: "test1", id: "test1", title: "Test1" },
       { closed: false, description: "test2", id: "test2", title: "Test2" },
     ];
@@ -66,8 +60,8 @@ describe("Tasks reducer", () => {
   });
 
   test("action closeTask if equal id's", () => {
-    const input: TasksState = tasksReducer(undefined, closeTask("test1"));
-    const output = [
+    const input = tasksReducer(undefined, closeTask("test1"));
+    const output: TasksState = [
       { closed: true, description: "test1", id: "test1", title: "Test1" },
       { closed: false, description: "test2", id: "test2", title: "Test2" },
     ];
@@ -76,8 +70,8 @@ describe("Tasks reducer", () => {
   });
 
   test("action closeTask if don't equal id's", () => {
-    const input: TasksState = tasksReducer(undefined, closeTask("asdasd"));
-    const output = [
+    const input = tasksReducer(undefined, closeTask("asdasd"));
+    const output: TasksState = [
       { closed: false, description: "test1", id: "test1", title: "Test1" },
       { closed: false, description: "test2", id: "test2", title: "Test2" },
     ];
@@ -86,8 +80,8 @@ describe("Tasks reducer", () => {
   });
 
   test("action restoreTask if equal id's", () => {
-    const input: TasksState = tasksReducer(undefined, restoreTask("test2"));
-    const output = [
+    const input = tasksReducer(undefined, restoreTask("test2"));
+    const output: TasksState = [
       { closed: false, description: "test1", id: "test1", title: "Test1" },
       { closed: false, description: "test2", id: "test2", title: "Test2" },
     ];
@@ -96,8 +90,8 @@ describe("Tasks reducer", () => {
   });
 
   test("action restoreTask if don't equal id's", () => {
-    const input: TasksState = tasksReducer(undefined, restoreTask("asdsadas"));
-    const output = [
+    const input = tasksReducer(undefined, restoreTask("asdsadas"));
+    const output: TasksState = [
       { closed: false, description: "test1", id: "test1", title: "Test1" },
       { closed: false, description: "test2", id: "test2", title: "Test2" },
     ];

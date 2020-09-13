@@ -8,10 +8,7 @@ describe("Root reducer", () => {
   test("create store with root reducer", () => {
     const store = createStore(rootReducer);
 
-    const input: CombinedState<{
-      tasks: TasksState;
-      dialog: DialogState;
-    }> = store.getState();
+    const input = store.getState();
     const output: CombinedState<{
       tasks: TasksState;
       dialog: DialogState;

@@ -1,4 +1,4 @@
-import { loadState, saveState } from "store/localStorage";
+import { loadState, PreloadedState, saveState } from "store/localStorage";
 
 class LocalStorageMock {
   store: Record<string, string>;
@@ -32,7 +32,7 @@ describe("Local storage", () => {
     localStorage.setItem("state", "1");
 
     const input = loadState();
-    const output = 1;
+    const output: PreloadedState = 1;
 
     expect(input).toBe(output);
 
@@ -41,7 +41,7 @@ describe("Local storage", () => {
 
   test("loadState if getItem return null ", () => {
     const input = loadState();
-    const output = {};
+    const output: PreloadedState = {};
 
     expect(input).toEqual(output);
 

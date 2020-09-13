@@ -21,7 +21,7 @@ describe("Dialog actions", () => {
   });
 
   test("closeDialog with type create", () => {
-    const input: ActionCloseDialog = closeDialog(DialogTypes.CREATE);
+    const input = closeDialog(DialogTypes.CREATE);
     const output: ActionCloseDialog = {
       payload: {
         currentTaskId: "",
@@ -35,7 +35,7 @@ describe("Dialog actions", () => {
   });
 
   test("openDialog with type update", () => {
-    const input: ActionOpenDialog = openDialog(DialogTypes.UPDATE, "32425");
+    const input = openDialog(DialogTypes.UPDATE, "32425");
     const output: ActionOpenDialog = {
       payload: {
         currentTaskId: "32425",
@@ -49,7 +49,7 @@ describe("Dialog actions", () => {
   });
 
   test("closeDialog with type update", () => {
-    const input: ActionCloseDialog = closeDialog(DialogTypes.UPDATE);
+    const input = closeDialog(DialogTypes.UPDATE);
     const output: ActionCloseDialog = {
       payload: {
         currentTaskId: "",

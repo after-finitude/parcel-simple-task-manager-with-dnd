@@ -32,7 +32,7 @@ describe("Tasks actions", () => {
   });
 
   test("addTask", () => {
-    const input: ActionAddTask = addTask("Title", "Description", "1");
+    const input = addTask("Title", "Description", "1");
     const output: ActionAddTask = {
       payload: {
         id: "1",
@@ -47,7 +47,7 @@ describe("Tasks actions", () => {
   });
 
   test("updateTask", () => {
-    const input: ActionUpdateTask = updateTask("1", "Title", "Description");
+    const input = updateTask("1", "Title", "Description");
     const output: ActionUpdateTask = {
       payload: {
         id: "1",
@@ -62,7 +62,7 @@ describe("Tasks actions", () => {
   });
 
   test("closeTask", () => {
-    const input: ActionCloseTask = closeTask("3");
+    const input = closeTask("3");
     const output: ActionCloseTask = {
       payload: {
         id: "3",
@@ -74,7 +74,7 @@ describe("Tasks actions", () => {
   });
 
   test("restoreTask", () => {
-    const input: ActionRestoreTask = restoreTask("23");
+    const input = restoreTask("23");
     const output: ActionRestoreTask = {
       payload: {
         id: "23",

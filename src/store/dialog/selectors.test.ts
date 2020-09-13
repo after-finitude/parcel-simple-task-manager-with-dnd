@@ -1,4 +1,5 @@
 import { selectTaskById } from "store/dialog/selectors";
+import { Task } from "store/tasks/types";
 
 describe("Dialog selectors", () => {
   test("selectTaskById with id 1", () => {
@@ -6,7 +7,7 @@ describe("Dialog selectors", () => {
       { id: "1", title: "Test1", description: "test1", closed: false },
       { id: "2", title: "Test2", description: "test2", closed: false },
     ]);
-    const output = {
+    const output: Task = {
       id: "1",
       title: "Test1",
       description: "test1",
@@ -19,7 +20,7 @@ describe("Dialog selectors", () => {
       { id: "1", title: "Test1", description: "test1", closed: false },
       { id: "2", title: "Test2", description: "test2", closed: false },
     ]);
-    const output = {
+    const output: Task = {
       id: "2",
       title: "Test2",
       description: "test2",
