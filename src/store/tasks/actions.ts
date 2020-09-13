@@ -16,9 +16,9 @@ export const updateState = (tasks: TasksState): ActionUpdateState => ({
 });
 
 export const addTask = (
-  title: string,
-  description: string,
-  id: string = v4(),
+title: string,
+                         description: string,
+     id: string = v4(),
 ): ActionAddTask => ({
   type: TasksActionTypes.ADD_TASK,
   payload: {
