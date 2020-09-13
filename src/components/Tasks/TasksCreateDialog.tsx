@@ -25,6 +25,7 @@ export const TasksCreateDialog: React.FC<Props> = memo(({ status }) => {
   const dispatch = useDispatch();
   const { register, handleSubmit } = useForm<FormData>();
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const onSubmit = useCallback(
     handleSubmit(({ title, description }) => {
       dispatch(thunkAddTask(title, description));

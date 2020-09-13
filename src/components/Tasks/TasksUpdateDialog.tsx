@@ -34,6 +34,7 @@ export const TasksUpdateDialog: React.FC<Props> = memo(
       selectTaskById(currentTaskId),
     );
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const onSubmit = useCallback(
       handleSubmit(({ title, description }) => {
         dispatch(thunkUpdateTask(title, description));

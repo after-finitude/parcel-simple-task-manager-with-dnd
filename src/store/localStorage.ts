@@ -1,7 +1,7 @@
 import { RootState } from "store/rootReducer";
 import { TasksState } from "store/tasks/types";
 
-export type PreloadedState = {} | RootState | undefined;
+export type PreloadedState = Record<string, unknown> | RootState | undefined;
 
 export const loadState = (): PreloadedState => {
   try {
@@ -15,6 +15,7 @@ export const loadState = (): PreloadedState => {
 
     return deserializedState;
   } catch (err) {
+    // eslint-disable-next-line no-console
     console.error(err);
   }
 };
@@ -25,6 +26,7 @@ export const saveState = (state: { tasks: TasksState }): void | undefined => {
 
     return localStorage.setItem("state", serializedState);
   } catch (err) {
+    // eslint-disable-next-line no-console
     console.error(err);
   }
 };

@@ -20,19 +20,21 @@ class LocalStorageMock {
   }
 
   removeItem(key: string) {
+    // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
     delete this.store[key];
   }
 }
 
 describe("Local storage", () => {
   beforeAll(() => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     localStorage = new LocalStorageMock() as any;
   });
   test("loadState", () => {
     localStorage.setItem("state", "1");
 
     const input = loadState();
-    const output: PreloadedState = 1;
+    const output = 1;
 
     expect(input).toBe(output);
 

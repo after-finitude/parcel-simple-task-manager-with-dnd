@@ -5,10 +5,7 @@ import {
   ActionCloseDialog,
 } from "store/dialog/types";
 
-export const openDialog = (
-  type: DialogTypes,
-  id: string = "",
-): ActionOpenDialog => ({
+export const openDialog = (type: DialogTypes, id = ""): ActionOpenDialog => ({
   type: DialogActionTypes.OPEN_DIALOG,
   payload: {
     type,
