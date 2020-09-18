@@ -1,4 +1,4 @@
-name: Build simple-task-manager-with-dnd-parcel
+name: CI
 
 on: push
 
@@ -15,11 +15,6 @@ jobs:
         with:
           path: "**/node_modules"
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
-
-      - name: Prettify
-        uses: creyD/prettier_action@v2.2
-        with:
-          prettier_options: --write src/**/*.{html,ts,tsx}
 
       - name: Install deps
         run: yarn install --frozen-lockfile
