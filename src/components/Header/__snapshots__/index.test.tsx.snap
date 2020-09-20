@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header should render correctly 1`] = `
-<WithStyles(ForwardRef(Typography))
-  variant="h3"
+<h3
+  class="MuiTypography-root MuiTypography-h3"
 >
   Task Manager
-</WithStyles(ForwardRef(Typography))>
+</h3>
 `;
