@@ -15,4 +15,14 @@ describe("Main", () => {
 
     expect(component).toMatchSnapshot();
   });
+
+  it("should render Main", () => {
+    const component = shallow(
+      <Provider store={mockStore}>
+        <Main />
+      </Provider>,
+    );
+
+    expect(component.find("Main")).toHaveLength(1);
+  });
 });
