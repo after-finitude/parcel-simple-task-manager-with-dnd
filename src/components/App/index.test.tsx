@@ -9,4 +9,16 @@ describe("App", () => {
 
     expect(component).toMatchSnapshot();
   });
+
+  it("should render Header", () => {
+    const component = shallow(<App />);
+
+    expect(component.find("Header")).toHaveLength(1);
+  });
+
+  it("should render Main", () => {
+    const component = shallow(<App />);
+
+    expect(component.find("Main")).toHaveLength(1);
+  });
 });

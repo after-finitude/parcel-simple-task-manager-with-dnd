@@ -32,6 +32,6 @@ exports[`Main should render correctly 1`] = `
     }
   }
 >
-  <Memo() />
+  <Main />
 </ContextProvider>
 `;

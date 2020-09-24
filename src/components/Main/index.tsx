@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React from "react";
 import { useSelector, shallowEqual } from "react-redux";
 import styled from "styled-components";
 
@@ -10,7 +10,7 @@ import { TasksAddButton } from "components/Tasks/TasksAddButton";
 import { TasksCreateDialog } from "components/Tasks/TasksCreateDialog";
 import { TasksUpdateDialog } from "components/Tasks/TasksUpdateDialog";
 
-export const Main: React.FC = memo(() => {
+export const Main: React.FC = () => {
   const dialog = useSelector<RootState, DialogState>(
     state => state.dialog,
     shallowEqual,
@@ -30,7 +30,7 @@ export const Main: React.FC = memo(() => {
       )}
     </MainLayout>
   );
-});
+};
 
 const MainLayout = styled.div`
   width: 25%;

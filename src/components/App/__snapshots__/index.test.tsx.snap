@@ -3,6 +3,6 @@
 exports[`App should render correctly 1`] = `
 <styled.div>
   <Header />
-  <Memo() />
+  <Main />
 </styled.div>
 `;
