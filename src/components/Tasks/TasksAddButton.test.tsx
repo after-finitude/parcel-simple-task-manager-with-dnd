@@ -16,6 +16,16 @@ describe("TasksAddButton", () => {
     expect(component).toMatchSnapshot();
   });
 
+  it("should render button", () => {
+    const component = mount(
+      <Provider store={mockStore}>
+        <TasksAddButton />
+      </Provider>,
+    );
+
+    expect(component.find("button")).toHaveLength(1);
+  });
+
   it("should render text 'Add Task'", () => {
     const component = mount(
       <Provider store={mockStore}>
