@@ -15,4 +15,14 @@ describe("TasksAddButton", () => {
 
     expect(component).toMatchSnapshot();
   });
+
+  it("should render text 'Add Task'", () => {
+    const component = mount(
+      <Provider store={mockStore}>
+        <TasksAddButton />
+      </Provider>,
+    );
+
+    expect(component.text()).toContain("Add task");
+  });
 });
