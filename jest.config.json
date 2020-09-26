@@ -1,4 +1,7 @@
 {
-  "setupFilesAfterEnv": ["./setupTests.js"],
-  "snapshotSerializers": ["enzyme-to-json/serializer"]
+  "verbose": true,
+  "moduleFileExtensions": ["js", "ts", "tsx"],
+  "snapshotSerializers": ["enzyme-to-json/serializer"],
+  "setupFilesAfterEnv": ["./scripts/setupTests.js"],
+  "collectCoverageFrom": ["<rootDir>/src/**/*.{ts,tsx}"]
 }
