@@ -18,10 +18,10 @@ type FormData = {
 };
 
 interface Props {
-  status: boolean;
+  status?: boolean;
 }
 
-export const TasksCreateDialog: React.FC<Props> = memo(({ status }) => {
+export const TasksCreateDialog: React.FC<Props> = memo(({ status = false }) => {
   const dispatch = useDispatch();
   const { register, handleSubmit } = useForm<FormData>();
 

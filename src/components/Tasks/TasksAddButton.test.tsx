@@ -26,7 +26,7 @@ describe("TasksAddButton", () => {
     expect(component.find("button")).toHaveLength(1);
   });
 
-  it("should render text 'Add Task'", () => {
+  it("should render text 'Add task'", () => {
     const component = mount(
       <Provider store={mockStore}>
         <TasksAddButton />
