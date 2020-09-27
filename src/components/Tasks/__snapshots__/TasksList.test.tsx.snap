@@ -28,7 +28,7 @@ exports[`TasksList should render correctly 1`] = `
         <ul
           className="MuiList-root MuiList-padding"
         >
-          <ReactSortable
+          <d
             clone={[Function]}
             list={
               Array [
@@ -971,7 +971,7 @@ exports[`TasksList should render correctly 1`] = `
                 </styled.div>
               </Memo()>
             </div>
-          </ReactSortable>
+          </d>
         </ul>
       </ForwardRef(List)>
     </WithStyles(ForwardRef(List))>
