@@ -16,4 +16,34 @@ describe("TasksUpdateDialog", () => {
 
     expect(component).toMatchSnapshot();
   });
+
+  it("should render correctly when modal open", () => {
+    const component = mount(
+      <Provider store={mockStore}>
+        <TasksUpdateDialog status={true} currentTaskId="1" />
+      </Provider>,
+    );
+
+    expect(component).toMatchSnapshot();
+  });
+
+  it("should contain text 'Update task' when modal open", () => {
+    const component = mount(
+      <Provider store={mockStore}>
+        <TasksUpdateDialog status={true} currentTaskId="1" />
+      </Provider>,
+    );
+
+    expect(component.text()).toContain("Update task");
+  });
+
+  it("should contain text 'Cancel' when modal open", () => {
+    const component = mount(
+      <Provider store={mockStore}>
+        <TasksUpdateDialog status={true} currentTaskId="1" />
+      </Provider>,
+    );
+
+    expect(component.text()).toContain("Cancel");
+  });
 });
