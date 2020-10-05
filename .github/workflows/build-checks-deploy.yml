@@ -3,7 +3,7 @@ name: Simple Task Manager CI/CD
 on: push
 
 jobs:
-  build:
+  build-checks-deploy:
     runs-on: ubuntu-latest
 
     steps:
