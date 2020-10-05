@@ -1,4 +1,4 @@
-name: CI
+name: Simple Task Manager CI/CD
 
 on: push
 
@@ -27,3 +27,11 @@ jobs:
 
       - name: Tests
         run: yarn test
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@3.6.2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: build
+          CLEAN: true
