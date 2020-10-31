@@ -22,7 +22,7 @@ exports[`TasksListItem should render correctly 1`] = `
       closed={false}
     >
       <div
-        className="sc-bdnylx joVpTC"
+        className="sc-bdfBwQ GSvvC"
       >
         <WithStyles(ForwardRef(ListItem))>
           <ForwardRef(ListItem)
