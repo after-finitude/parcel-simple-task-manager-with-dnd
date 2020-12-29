@@ -262,7 +262,7 @@ exports[`TasksListItem should render correctly 1`] = `
                               <span
                                 className="MuiIconButton-label"
                               >
-                                <ForwardRef>
+                                <ForwardRef(EditIcon)>
                                   <WithStyles(ForwardRef(SvgIcon))>
                                     <ForwardRef(SvgIcon)
                                       classes={
@@ -291,7 +291,7 @@ exports[`TasksListItem should render correctly 1`] = `
                                       </svg>
                                     </ForwardRef(SvgIcon)>
                                   </WithStyles(ForwardRef(SvgIcon))>
-                                </ForwardRef>
+                                </ForwardRef(EditIcon)>
                               </span>
                               <WithStyles(memo)
                                 center={true}
@@ -394,7 +394,7 @@ exports[`TasksListItem should render correctly 1`] = `
                               <span
                                 className="MuiIconButton-label"
                               >
-                                <ForwardRef>
+                                <ForwardRef(CloseIcon)>
                                   <WithStyles(ForwardRef(SvgIcon))>
                                     <ForwardRef(SvgIcon)
                                       classes={
@@ -423,7 +423,7 @@ exports[`TasksListItem should render correctly 1`] = `
                                       </svg>
                                     </ForwardRef(SvgIcon)>
                                   </WithStyles(ForwardRef(SvgIcon))>
-                                </ForwardRef>
+                                </ForwardRef(CloseIcon)>
                               </span>
                               <WithStyles(memo)
                                 center={true}

@@ -24,7 +24,7 @@ exports[`TasksAddButton should render correctly 1`] = `
         <WithStyles(ForwardRef(Button))
           className="Component-root-1"
           onClick={[Function]}
-          startIcon={<Memo(AddIcon) />}
+          startIcon={<Memo />}
         >
           <ForwardRef(Button)
             className="Component-root-1"
@@ -62,7 +62,7 @@ exports[`TasksAddButton should render correctly 1`] = `
               }
             }
             onClick={[Function]}
-            startIcon={<Memo(AddIcon) />}
+            startIcon={<Memo />}
           >
             <WithStyles(ForwardRef(ButtonBase))
               className="MuiButton-root MuiButton-text Component-root-1"
@@ -113,7 +113,7 @@ exports[`TasksAddButton should render correctly 1`] = `
                     <span
                       className="MuiButton-startIcon MuiButton-iconSizeMedium"
                     >
-                      <ForwardRef>
+                      <ForwardRef(AddIcon)>
                         <WithStyles(ForwardRef(SvgIcon))>
                           <ForwardRef(SvgIcon)
                             classes={
@@ -142,7 +142,7 @@ exports[`TasksAddButton should render correctly 1`] = `
                             </svg>
                           </ForwardRef(SvgIcon)>
                         </WithStyles(ForwardRef(SvgIcon))>
-                      </ForwardRef>
+                      </ForwardRef(AddIcon)>
                     </span>
                     Add task
                   </span>

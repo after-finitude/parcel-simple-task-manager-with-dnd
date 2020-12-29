@@ -59,7 +59,6 @@ exports[`TasksCreateDialog should render correctly 1`] = `
                 },
                 "render": [Function],
               },
-              "displayName": "WithStyles(ForwardRef(Backdrop))",
               "options": Object {
                 "defaultTheme": Object {
                   "breakpoints": Object {
@@ -441,7 +440,6 @@ exports[`TasksCreateDialog should render correctly when modal open 1`] = `
                 },
                 "render": [Function],
               },
-              "displayName": "WithStyles(ForwardRef(Backdrop))",
               "options": Object {
                 "defaultTheme": Object {
                   "breakpoints": Object {
