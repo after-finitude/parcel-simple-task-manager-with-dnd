@@ -1,12 +1,13 @@
 {
-  "include": ["src/**/*"],
+  "include": ["src"],
   "exclude": ["node_modules", "build"],
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
       "components/*": ["./src/components/*"],
       "store/*": ["./src/store/*"],
-      "utils/*": ["./src/utils/*"]
+      "utils/*": ["./src/utils/*"],
+      "services/*": ["./src/services/*"]
     },
     "target": "es5",
     "module": "esnext",

@@ -6,7 +6,7 @@ import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 import { App } from "components/App";
 
 import { rootReducer } from "store/rootReducer";
-import { PreloadedState, loadState, saveState } from "store/localStorage";
+import { PreloadedState, loadState, saveState } from "store/preloadedState";
 
 const preloadedState: PreloadedState = loadState();
 
